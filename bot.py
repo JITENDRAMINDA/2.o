@@ -1,5 +1,5 @@
 from pyrogram import Client, Filters
-app = Client("linnebot",bot_token="714971078:AAGpKCqk7s8v6f6zJl42CPG-Jh8I2s_FTPs",api_id = 488556,api_hash="c722b7aadbf8b72109b2f96f30974c6d")
+app = Client("linnebot",bot_token="804317808:AAHqlvUUVk6KRjoaDTfor47SOEPsREaS0wk",api_id = 488556,api_hash="c722b7aadbf8b72109b2f96f30974c6d")
 bullet = -1001378725482
 ferrari = -1001274887387 
 
