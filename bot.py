@@ -1,5 +1,5 @@
 from pyrogram import Client, Filters
-u = "804587074:AAHibW3reto4LcGm7twQElMuGYJrmMoeR_o"
+u = "873899868:AAHeYWS39PrFXd0OpfBm0KxHk-HXckHWd0I"
 
 app = Client("linnebot",bot_token= u ,api_id = 488556,api_hash="c722b7aadbf8b72109b2f96f30974c6d")
 bullet = -1001378725482
