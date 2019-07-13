@@ -1,7 +1,7 @@
 from pyrogram import Client, Filters
 #u = "873899868:AAHeYWS39PrFXd0OpfBm0KxHk-HXckHWd0I"
 
-app = Client("ssnn",bot_token="835349563:AAEw0o3fa2FVm898JF_Hav_jgsajZPna-I8",api_id=869912,api_hash="a7b049e08df35464047d57e5134327e5")
+app = Client("ssnn",bot_token="809686330:AAGFehjD0S88i8As_mQ2WQhilSfASSczDoI",api_id=869912,api_hash="a7b049e08df35464047d57e5134327e5")
 
 #("linnebot",bot_token= u ,api_id = 488556,api_hash="c722b7aadbf8b72109b2f96f30974c6d")
 bullet = -1001378725482
