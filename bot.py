@@ -1,7 +1,7 @@
 from pyrogram import Client, Filters
 #u = "873899868:AAHeYWS39PrFXd0OpfBm0KxHk-HXckHWd0I"
 
-app = Client("ssnn",bot_token="809686330:AAGFehjD0S88i8As_mQ2WQhilSfASSczDoI",api_id=869912,api_hash="a7b049e08df35464047d57e5134327e5")
+app = Client("ssnn",bot_token="835604104:AAHMQwEQ2t5QRV-96o-mQJFoAw2WaBugkZM",api_id=869912,api_hash="a7b049e08df35464047d57e5134327e5")
 
 #("linnebot",bot_token= u ,api_id = 488556,api_hash="c722b7aadbf8b72109b2f96f30974c6d")
 bullet = -1001378725482
@@ -65,7 +65,10 @@ def main(client, message):
     id = str(message.message_id)
     if id in x:
      try:
-      client.edit_message_text(int(m),int(x[x.index(id)+1]), "**" + message.text + "**" )
+      if messege.text == ".":
+       client.delete_messages(int(m),int(x[x.index(id)+1]))
+      else:
+       client.edit_message_text(int(m),int(x[x.index(id)+1]), "**" + message.text + "**" )
      except:
       continue
 @app.on_message(Filters.chat(bullet) & Filters.edited)
@@ -84,9 +87,10 @@ def main(client, message):
     id = str(message.message_id)
     if id in x:
      try:
-      client.edit_message_text(int(a),int(x[x.index(id)+1]), "**" + message.text + "**" )
-     except:
-      continue
+      if messege.text == ".":
+       client.delete_messages(int(m),int(x[x.index(id)+1]))
+      else:
+       client.edit_message_text(int(m),int(x[x.index(id)+1]), "**" + message.text + "**" )
 @app.on_message(Filters.command('add') & Filters.user(491634139) )
 def forward(client, message):
  if len(message.text.split(' ')) > 2:
