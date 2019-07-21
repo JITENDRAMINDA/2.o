@@ -91,6 +91,10 @@ def main(client, message):
        client.delete_messages(int(m),int(x[x.index(id)+1]))
       else:
        client.edit_message_text(int(m),int(x[x.index(id)+1]), "**" + message.text + "**" )
+     except:
+      continue
+
+
 @app.on_message(Filters.command('add') & Filters.user(491634139) )
 def forward(client, message):
  if len(message.text.split(' ')) > 2:
