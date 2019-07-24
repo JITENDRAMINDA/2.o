@@ -82,7 +82,7 @@ def main(client, message):
     x = c.split()
     id = str(message.message_id)
     if id in x:
-      if messege.text == ".":
+      if message.text == ".":
        client.delete_messages(int(m),int(x[x.index(id)+1]))
       else:
        client.edit_message_text(int(m),int(x[x.index(id)+1]), "**" + message.text + "**" )
