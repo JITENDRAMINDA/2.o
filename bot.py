@@ -1,9 +1,10 @@
 from pyrogram import Client, Filters
 #u = "873899868:AAHeYWS39PrFXd0OpfBm0KxHk-HXckHWd0I"
 
-app = Client("mnnn",bot_token="918985036:AAGuOy3Z00pcdp761gDouf5iEmnGz7rivR0",api_id=768402,api_hash="f6420bf67303614279049d48d3e670f6
+app = Client("mnnn",bot_token="918985036:AAGuOy3Z00pcdp761gDouf5iEmnGz7rivR0",api_id=768402,api_hash="f6420bf67303614279049d48d3e670f6")
 
 #("linnebot",bot_token= u ,api_id = 488556,api_hash="c722b7aadbf8b72109b2f96f30974c6d")
+
 bullet = -1001316526418
 ferrari = -1001274887387 
 @app.on_message(Filters.chat(bullet) & ~ Filters.edited)
