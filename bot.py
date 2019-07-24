@@ -62,11 +62,15 @@ def main(client, message):
     x = c.split()
     id = str(message.message_id)
     if id in x:
+     try:
       if message.text == ".":
        client.delete_messages(int(m),int(x[x.index(id)+1]))
       else:
        client.edit_message_text(int(m),int(x[x.index(id)+1]), "**" + message.text + "**" )
-     
+     except FloodWait as e:
+       time.sleep(e.x)
+
+
 @app.on_message(Filters.chat(bullet) & Filters.edited)
 def main(client, message):
  file = open("bullet.txt" , "r")
@@ -82,11 +86,13 @@ def main(client, message):
     x = c.split()
     id = str(message.message_id)
     if id in x:
+     try:
       if message.text == ".":
        client.delete_messages(int(a),int(x[x.index(id)+1]))
       else:
        client.edit_message_text(int(a),int(x[x.index(id)+1]), "**" + message.text + "**" )
-     
+     except FloodWait as e:
+      time.sleep(e.x)
 
 @app.on_message(Filters.command('add') & Filters.user(491634139) )
 def forward(client, message):
