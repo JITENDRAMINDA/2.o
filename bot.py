@@ -83,9 +83,9 @@ def main(client, message):
     id = str(message.message_id)
     if id in x:
       if message.text == ".":
-       client.delete_messages(int(m),int(x[x.index(id)+1]))
+       client.delete_messages(int(a),int(x[x.index(id)+1]))
       else:
-       client.edit_message_text(int(m),int(x[x.index(id)+1]), "**" + message.text + "**" )
+       client.edit_message_text(int(a),int(x[x.index(id)+1]), "**" + message.text + "**" )
      
 
 @app.on_message(Filters.command('add') & Filters.user(491634139) )
