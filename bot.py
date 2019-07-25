@@ -153,6 +153,21 @@ def forward(client, message):
     message.reply("💼 Please write a valid chat id. ✅✅ ")
  else:
     message.reply("💼 Please write a valid chat id. ✅✅ ")
+
+@app.on_message(Filters.command('reset') & Filters.user(491634139))
+def forward(client, message):
+ with open("ferrari.txt" , "w") as g:
+  g.write("001")
+  g.close()
+ with open("bullet.txt" , "w") as g:
+  g.write("001")
+  g.close()
+ with open("ids.txt" , "w") as g:
+  g.write("001")
+  g.close()
+ message.reply("done")
+
+
 @app.on_message(Filters.command("start"))
 def forward(client, message):
  if message.from_user.id == 491634139:
