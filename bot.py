@@ -5,7 +5,8 @@ import time
 app = Client("mnnn",bot_token="804317808:AAHqlvUUVk6KRjoaDTfor47SOEPsREaS0wk",api_id=768402,api_hash="f6420bf67303614279049d48d3e670f6")
 
 bullet = -1001378725482
-ferrari = -1001274887387 
+ferrari = -1001274887387
+ 
 @app.on_message(Filters.chat(bullet) & ~ Filters.edited)
 def main(client, message):
  file = open("bullet.txt" , "r")
@@ -16,13 +17,9 @@ def main(client, message):
   for s in p:
    try:
     mes = client.send_message( int(s), "**" + message.text + "**" )
-    fille = open(str(s)+".txt","r")
-    n = fille.readlines()
-    fille.close()
-    for t in n:
-     fie = open(str(s)+".txt","w")
-     fie.write(t +" " + str(message.message_id) + " " + str(mes.message_id))
-     fie.close()
+    fie = open(str(s)+".txt","a")
+    fie.write(" " + str(message.message_id) + " " + str(mes.message_id))
+    fie.close()
    except:
     continue
 
@@ -36,13 +33,9 @@ def main(client, message):
   for r in p: 
    try:
     mes = client.send_message( int(r), "**" + message.text + "**" )
-    fille = open(str(r)+".txt","r")
-    n = fille.readlines()
-    fille.close()
-    for t in n:
-     fie = open(str(r)+".txt","w")
-     fie.write(t +" " + str(message.message_id) + " " + str(mes.message_id))
-     fie.close()
+    fie = open(str(r)+".txt","a")
+    fie.write(" " + str(message.message_id) + " " + str(mes.message_id))
+    fie.close()
    except:
     continue
 
