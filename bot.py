@@ -2,7 +2,7 @@ from pyrogram import Client, Filters
 from pyrogram.errors import FloodWait
 import time
 
-app = Client("mnnn",bot_token="640829696:AAENacwyZYn8AT7_4APFRdjNrw2bqAg7ec4",api_id=768402,api_hash="f6420bf67303614279049d48d3e670f6")
+app = Client("mnnn",bot_token="866448484:AAEn8cnw2uxjbb_l9haTkrvK3k9GCsbhKK4",api_id=768402,api_hash="f6420bf67303614279049d48d3e670f6")
 
 bullet = -1001378725482
 ferrari = -1001274887387
