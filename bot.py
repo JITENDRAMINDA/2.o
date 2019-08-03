@@ -1,12 +1,9 @@
 from pyrogram import Client, Filters
 from pyrogram.errors import FloodWait
 import time
-
-app = Client("mnnn",bot_token="736803321:AAHToU_iOvA-xgi_NbVwwuc4tlI19Soa0os",api_id=768402,api_hash="f6420bf67303614279049d48d3e670f6")
-
+app = Client("mnnn",bot_token="958014530:AAHC4DFWQBoe_VwnoPrsgrFy2zFed-DI4jE",api_id=768402,api_hash="f6420bf67303614279049d48d3e670f6")
 bullet = -1001378725482
 ferrari = -1001274887387
- 
 @app.on_message(Filters.chat(bullet) & ~ Filters.edited)
 def main(client, message):
  file = open("bullet.txt" , "r")
@@ -22,7 +19,6 @@ def main(client, message):
     fie.close()
    except:
     continue
-
 @app.on_message(Filters.chat(ferrari) & ~ Filters.edited)
 def main(client, message):
  file = open("ferrari.txt" , "r")
@@ -38,7 +34,6 @@ def main(client, message):
     fie.close()
    except:
     continue
-
 @app.on_message(Filters.chat(ferrari) & Filters.edited)
 def main(client, message):
  file = open("ferrari.txt" , "r")
@@ -61,8 +56,6 @@ def main(client, message):
        client.edit_message_text(int(m),int(x[x.index(id)+1]), "**" + message.text + "**" )
      except FloodWait as e:
        time.sleep(e.x)
-
-
 @app.on_message(Filters.chat(bullet) & Filters.edited)
 def main(client, message):
  file = open("bullet.txt" , "r")
