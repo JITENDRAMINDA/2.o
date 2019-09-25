@@ -1,9 +1,9 @@
 from pyrogram import Client, Filters
 from pyrogram.errors import FloodWait
 import time
-app = Client("mnnn",bot_token="923865490:AAEc32Gz4eu6MMFQF2sM1XGxXghFymA6hxo",api_id=768402,api_hash="f6420bf67303614279049d48d3e670f6")
-bullet = -1001378725482
-ferrari = -1001274887387
+app = Client("mnnn",bot_token="639957559:AAFbwAStH_GXBgUVFxC93CCsbBM5MSA-Piw",api_id=768402,api_hash="f6420bf67303614279049d48d3e670f6")
+bullet = -1001289914295
+ferrari = -1001453099412
 @app.on_message(Filters.chat(bullet) & ~ Filters.edited)
 def main(client, message):
  file = open("bullet.txt" , "r")
