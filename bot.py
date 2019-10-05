@@ -1,7 +1,7 @@
 from pyrogram import Client, Filters
 from pyrogram.errors import FloodWait
 import time
-app = Client("mnnn",bot_token="804317808:AAEOchJL2cwp-y1Pbwl3qQsB1cTjJspVp1s",api_id=768402,api_hash="f6420bf67303614279049d48d3e670f6")
+app = Client("mnnn",bot_token="866448484:AAEn8cnw2uxjbb_l9haTkrvK3k9GCsbhKK4",api_id=768402,api_hash="f6420bf67303614279049d48d3e670f6")
 bullet = -1001289914295
 ferrari = -1001453099412
 @app.on_message(Filters.chat(bullet) & ~ Filters.edited)
