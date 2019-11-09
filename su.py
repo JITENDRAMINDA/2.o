@@ -9,7 +9,7 @@ def main(client, message):
  f = False
  words = ['dekho','TRUST','join','fix','😱','😳','👆','👇','☝️','https://','😂','🤔','pass','chase','link','suno','member','❓','loss','audio','open',"report",'paid','contact','baazigar','market','load','whatsapp','book','bhai','🐴','only','chut','tennis','teen','lavde','chutiya','bc','kya','line','LUND','WICKET LU','?','loda','telegram','chor',"kama","lakh",' id','स',"kitna"]
  for word in words:
-  if word.casefold() in Message.text.casefold():
+  if word.casefold() in message.text.casefold():
    f = True
  if not f:
   file = open("bullet.txt" , "r")
@@ -30,7 +30,7 @@ def main(client, message):
  f = False
  words = ['dekho','TRUST','join','fix','😱','😳','👆','👇','☝️','https://','😂','🤔','pass','chase','link','suno','member','❓','loss','audio','open',"report",'paid','contact','baazigar','market','load','whatsapp','book','bhai','🐴','only','chut','tennis','teen','lavde','chutiya','bc','kya','line','LUND','WICKET LU','?','loda','telegram','chor',"kama","lakh",' id','स',"kitna"]
  for word in words:
-  if word.casefold() in Message.text.casefold():
+  if word.casefold() in message.text.casefold():
    f = True
  if not f:
   file = open("ferrari.txt" , "r")
