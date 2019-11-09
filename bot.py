@@ -13,7 +13,7 @@ def main(client, message):
   p = line.split()
   for s in p:
    try:
-    mes = client.send_message( int(s), "**" + message.text + "**" )
+    mes = client.send_message( int(s),message.text.markdown)
     fie = open(str(s)+".txt","a")
     fie.write(" " + str(message.message_id) + " " + str(mes.message_id))
     fie.close()
@@ -28,7 +28,7 @@ def main(client, message):
   p = line.split()
   for r in p: 
    try:
-    mes = client.send_message( int(r), "**" + message.text + "**" )
+    mes = client.send_message( int(r),message.text.markdown )
     fie = open(str(r)+".txt","a")
     fie.write(" " + str(message.message_id) + " " + str(mes.message_id))
     fie.close()
@@ -53,7 +53,7 @@ def main(client, message):
       if message.text == ".":
        client.delete_messages(int(m),int(x[x.index(id)+1]))
       else:
-       client.edit_message_text(int(m),int(x[x.index(id)+1]), "**" + message.text + "**" )
+       client.edit_message_text(int(m),int(x[x.index(id)+1]),message.text.markdown )
      except FloodWait as e:
        time.sleep(e.x)
 @app.on_message(Filters.chat(bullet) & Filters.edited)
@@ -75,7 +75,7 @@ def main(client, message):
       if message.text == ".":
        client.delete_messages(int(a),int(x[x.index(id)+1]))
       else:
-       client.edit_message_text(int(a),int(x[x.index(id)+1]), "**" + message.text + "**" )
+       client.edit_message_text(int(a),int(x[x.index(id)+1]),message.text.markdown )
      except FloodWait as e:
       time.sleep(e.x)
 
