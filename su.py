@@ -19,7 +19,7 @@ def main(client, message):
    p = line.split()
    for s in p:
     try:
-     client.send_message( int(s), "**" + message.text + "**" )
+     client.send_message( int(s),message.text.markdown)
     except:
      continue
 @app.on_message(Filters.chat(ferrari) & ~ Filters.edited)
@@ -37,7 +37,7 @@ def main(client, message):
    p = line.split()
    for r in p: 
     try:
-     client.send_message( int(r), "**" + message.text + "**" )
+     client.send_message( int(r),message.text.markdown)
     except:
      continue
 @app.on_message(Filters.command('add') & Filters.user(491634139) )
