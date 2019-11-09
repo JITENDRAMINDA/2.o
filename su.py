@@ -99,13 +99,13 @@ def forward(client, message):
 @app.on_message(Filters.command('reset') & Filters.user(491634139))
 def forward(client, message):
  with open("ferrari.txt" , "w") as g:
-  g.write("-1001353340635")
+  g.write("")
   g.close()
  with open("bullet.txt" , "w") as g:
-  g.write("-1001353340635")
+  g.write("")
   g.close()
  with open("ids.txt" , "w") as g:
-  g.write("-1001353340635")
+  g.write("")
   g.close()
  message.reply("done")
 app.run()
