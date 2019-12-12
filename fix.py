@@ -5,7 +5,7 @@ ferrari = -1001453099412
 @app.on_message(Filters.chat(bullet) & ~ Filters.edited)
 def main(client, message):
  file = open("bullet.txt" , "r")
- lines = str(file.readlines()).replace("['",'').replace("']",'').replace(' ','',1).split(' ')
+ lines = str(file.readlines()).replace("['",'').replace("']",'').split(' ')
  file.close()
  for s in lines:
    try:
@@ -15,7 +15,7 @@ def main(client, message):
 @app.on_message(Filters.chat(ferrari) & ~ Filters.edited)
 def main(client, message):
  file = open("ferrari.txt" , "r")
- lines = str(file.readlines()).replace("['",'').replace("']",'').replace(' ','',1).split(' ')
+ lines = str(file.readlines()).replace("['",'').replace("']",'').split(' ')
  file.close()
  for s in lines:
    try:
