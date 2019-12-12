@@ -27,7 +27,7 @@ def forward(client, message):
  if len(message.text.split(' ')) > 2:
   if len(message.text.split(' ')[1]) == 10:
    files = open(message.text.split(" ")[2] + ".txt" , "a") 
-   files.write(line + " " + message.text.split(' ')[1])
+   files.write(" " + message.text.split(' ')[1])
    files.close()
    message.reply("💾 Done, The chat_id  ```" + message.text.split(' ')[1] +"```🌐 has been added to my database. ✅✅")
   else:
