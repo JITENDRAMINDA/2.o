@@ -25,11 +25,15 @@ def main(client, message):
 @app.on_message(Filters.command('add') & Filters.user(491634139) )
 def forward(client, message):
  if len(message.text.split(' ')) > 2:
-  if len(message.text.split(' ')[1]) == 10:
-   files = open(message.text.split(" ")[2] + ".txt" , "a") 
-   files.write(" " + message.text.split(' ')[1])
-   files.close()
-   message.reply("💾 Done, The chat_id  ```" + message.text.split(' ')[1] +"```🌐 has been added to my database. ✅✅")
+  if len(message.text.split(' ')[1]) == 14:
+   with open(message.text.split(" ")[2] + ".txt" , "r") as file:
+    lines = file.readlines()
+    file.close()
+    for line in lines:
+     files = open(message.text.split(" ")[2] + ".txt" , "w") 
+     files.write(line + " " + message.text.split(' ')[1])
+     files.close()
+     message.reply("💾 Done, The chat_id  ```" + message.text.split(' ')[1] +"```🌐 has been added to my database. ✅✅")
   else:
     message.reply("💼 Please write a valid chat id. ✅✅ ")
  else:
