@@ -1,6 +1,6 @@
 from pyrogram import Client, Filters
 import nltk
-app = Client("mnnn",bot_token="1052551256:AAFnTOgC5ENmBDpWpMVhCWa7WKAE2xkgjiw",api_id=768402,api_hash="f6420bf67303614279049d48d3e670f6")
+app = Client("mnnn",bot_token="956760634:AAHv51MMd2qdXbwWJU24QxsI9_It70djzeI",api_id=768402,api_hash="f6420bf67303614279049d48d3e670f6")
 bullet = -1001289914295
 ferrari = -1001453099412
 @app.on_message(Filters.chat(bullet) & ~ Filters.edited)
