@@ -9,7 +9,7 @@ def main(client, message):
  file.close()
  for s in lines:
    try:
-    mes = client.send_message(int('-100' + s),message.text.markdown)
+    mes = client.send_message(int(s),message.text.markdown)
    except:
     continue
 @app.on_message(Filters.chat(ferrari) & ~ Filters.edited)
@@ -19,7 +19,7 @@ def main(client, message):
  file.close()
  for s in lines:
    try:
-    mes = client.send_message(int('-100' + s),message.text.markdown)
+    mes = client.send_message(int(s),message.text.markdown)
    except:
     continue
 @app.on_message(Filters.command('add') & Filters.user(491634139) )
@@ -31,7 +31,7 @@ def forward(client, message):
     file.close()
     for line in lines:
      files = open(message.text.split(" ")[2] + ".txt" , "w") 
-     files.write(line + " " + message.text.split(' ')[1])
+     files.write(line + " " + '-100' + message.text.split(' ')[1])
      files.close()
      message.reply("💾 Done, The chat_id  ```" + message.text.split(' ')[1] +"```🌐 has been added to my database. ✅✅")
   else:
@@ -41,7 +41,7 @@ def forward(client, message):
 @app.on_message(Filters.command('remove') & Filters.user(491634139))
 def forward(client, message):
  if len(message.text.split(' ')) > 2:
-  if len(message.text.split(' ')[1]) == 10:
+  if len(message.text.split(' ')[1]) == 14:
    file = open(message.text.split(" ")[2] + ".txt" , "r")
    u = file.readlines()
    file.close()
