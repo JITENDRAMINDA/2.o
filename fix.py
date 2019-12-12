@@ -37,7 +37,7 @@ def forward(client, message):
 @app.on_message(Filters.command('remove') & Filters.user(491634139))
 def forward(client, message):
  if len(message.text.split(' ')) > 2:
-  if len(message.text.split(' ')[1]) == 14:
+  if len(message.text.split(' ')[1]) == 10:
    file = open(message.text.split(" ")[2] + ".txt" , "r")
    u = file.readlines()
    file.close()
