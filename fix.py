@@ -42,7 +42,7 @@ def forward(client, message):
    u = str(file.readlines()).replace("['",'').replace("']",'').replace(' ','',1).split(' ')
    file.close() 
    del u[u.index(message.text.split(' ')[1])]
-   y = " ".join(str(x) for x in lines)
+   y = " ".join(str(x) for x in u)
    files = open(message.text.split(" ")[2] + ".txt" , "w") 
    files.write(y)
    files.close()
